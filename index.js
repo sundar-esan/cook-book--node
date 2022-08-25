@@ -198,7 +198,7 @@ async function createConnection(){
 const client = await createConnection();
 
 app.get('/', (request, response) => {
-  response.send('Hello World!🌍🧡')
+  response.send('Welcome to my Cook book world 😘🌍🧡')
 })
 
 app.get('/recipes', async function (request, response) {
