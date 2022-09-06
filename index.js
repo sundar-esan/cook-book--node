@@ -3,6 +3,7 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 console.log(process.env.MONGO_URL);
@@ -181,6 +182,8 @@ const recipes = [{
     "preparation": " In a pan, dry roast cumin, fennel and coriander seeds till they turn aromatic. It might takes about 4 minutes on medium flame.Let the roasted spices cool down. Add it to mixer or food processor and grind it to a smooth powder, without adding water. Keep it ready.Clean the chicken pieces with water for 4-5 times and marinate it with half a tsp turmeric powder and half a tsp of salt.Let the marinated chicken sit for 15 minutes. No need to refrigerate.Heat a heavy bottomed pan/ kadai/wok, add 3 tsp of cooking oil.Add finely chopped shallots (pearl onions), fry till they turn soft.Add ginger-garlic paste, fry till raw smell of the ginger-garlic paste goes off.Add finely chopped tomatoes and cook till they become mushy.Now, it's time to add the marinated chicken pieces. Add the chicken pieces and cook on medium flame for 4 minutes. Then add the roasted ground (cumin + fennel + coriander) powder, half a tsp turmeric powder, red chilli powder/paprika, black pepper powder.Cook for 5 minutes on medium flame. Add half a cup of water and add chopped coriander leaves. cook it covered with a lid for 4 minutes.See if it is still watery, then cook until the curry thickens. After few more minutes of cooking on medium flame, the curry has thickened. Now switch off the flame."
 }
 ]
+//app.use(cors()) will allow all the user to acesss our api
+app.use(cors());
 
 // app.use--->middleware -->intercept the all request -->converting body to json
 
